@@ -1,4 +1,9 @@
 import unittest
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from conversion_pipeline import markdown_to_html_node
 from textnode import TextNode, TextType
 from converters import split_nodes_delimiter

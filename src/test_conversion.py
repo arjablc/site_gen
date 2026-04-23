@@ -1,7 +1,6 @@
 import unittest
-from htmlnode import LeafNode
 from textnode import TextNode, TextType
-from main import text_node_to_html_node
+from converters import text_node_to_html_node
 
 
 class TestConversion(unittest.TestCase):
@@ -109,7 +108,3 @@ class TestConversion(unittest.TestCase):
         html_node = text_node_to_html_node(node)
         self.assertEqual(html_node.value, "")
         self.assertEqual(html_node.tag, "b")
-
-
-if __name__ == "__main__":
-    unittest.main()

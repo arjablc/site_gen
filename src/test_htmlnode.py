@@ -1,4 +1,5 @@
 import unittest
+
 from htmlnode import HTMLNode
 
 
@@ -71,7 +72,3 @@ class TestHTMLNode(unittest.TestCase):
         self.assertEqual(node.value, "Parent")
         self.assertEqual(len(node.children), 1)
         self.assertEqual(node.props["class"], "container")
-
-
-if __name__ == "__main__":
-    unittest.main()
